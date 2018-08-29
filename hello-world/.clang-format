@@ -1,0 +1,13 @@
+{
+    BasedOnStyle: "Webkit",
+    PointerAlignment: "Middle",
+    ColumnLimit: "100",
+    AlwaysBreakAfterReturnType: "TopLevel",
+    AlignAfterOpenBracket: "Align",
+    BinPackParameters: "false",
+    BinPackArguments: "false",
+    AlignConsecutiveDeclarations: "true",
+    AlignConsecutiveAssignments: "true",
+    AlignOperands: "true",
+    AlignTrailingComments: "true"
+}

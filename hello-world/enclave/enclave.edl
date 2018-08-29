@@ -1,0 +1,7 @@
+enclave {
+    trusted {
+        public int ecall_hello_world(
+            [user_check] char * buffer_out
+        );
+    };
+};
