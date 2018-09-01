@@ -1,0 +1,27 @@
+enclave {
+    trusted {
+        public char * ecall_unseal_data(
+            [user_check] uint8_t * input_buffer_in,
+                         size_t    input_buffer_len,
+            [user_check] size_t  * output_len_out
+        );
+
+        public uint8_t * ecall_seal_data(
+            [user_check] char    * input_buffer_in,
+                         size_t    input_buffer_len,
+            [user_check] size_t  * output_len_out
+        );
+    };
+
+    untrusted {
+        // ---------------------- utilities ---------------------
+
+        /* allocates a buffer in untrusted memory */
+        void * ocall_calloc(size_t size);
+
+        /* frees buffer in untrusted memory */
+        void ocall_free([user_check] void * untrusted_ptr);
+
+        void ocall_print([in, string] char * str);
+    };
+};
